@@ -1,0 +1,13 @@
+A = double(A);
+
+[M,N] = size(A);
+
+Ac = zeros(M,N);
+for i=1:M
+    for j=1:N
+        Ac(i,j) = A(i,j)*(-1)^(i+j);
+    end
+end
+
+figure
+ip_disp(Ac)
